@@ -3,10 +3,13 @@ import { Grid, Button, makeStyles, Tooltip } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 
 const useStyles = makeStyles((theme) => ({
+  workspace: {
+    backgroundColor: theme.palette.workspace.main
+  },
   [theme.breakpoints.up("xs")]: {
     workspace: {
-      height: 100,
-      width: 125
+      height: 75,
+      width: 150
     }
   },
   [theme.breakpoints.up("sm")]: {
