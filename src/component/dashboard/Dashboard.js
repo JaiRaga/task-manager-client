@@ -2,6 +2,8 @@ import React from "react";
 import { Grid, makeStyles } from "@material-ui/core";
 import AddTask from "../task/AddTask";
 import CreateWorkSpace from "../workspace/CreateWorkSpace";
+import Empty from "../task/Empty";
+import Tasks from "../task/Tasks";
 
 const useStyles = makeStyles((theme) => ({
   task: {
@@ -15,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#4cbbb9"
   },
   spacing: {
-    padding: 10
+    padding: 10,
+    height: "100vh"
   }
 }));
 
@@ -27,11 +30,18 @@ const Dashboard = () => {
         <Grid
           container
           item
+          wrap='nowrap'
           direction='column'
           alignItems='center'
           className={classes.spacing}>
           <Grid item>
             <AddTask />
+          </Grid>
+          <Grid item>
+            <Empty severity='info' msg='No Tasks Yet!' />
+          </Grid>
+          <Grid item>
+            <Tasks />
           </Grid>
         </Grid>
       </Grid>
@@ -44,6 +54,9 @@ const Dashboard = () => {
           className={classes.spacing}>
           <Grid item>
             <CreateWorkSpace />
+          </Grid>
+          <Grid item>
+            <Empty severity='error' msg='No Workspaces!' />
           </Grid>
         </Grid>
       </Grid>
