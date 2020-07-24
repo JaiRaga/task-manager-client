@@ -21,6 +21,8 @@ const Tasks = () => {
       direction='column'
       justify='center'
       alignItems='center'
+      xs={12}
+      md={12}
       wrap='nowrap'
       className={classes.spacing}>
       <Grid item className={classes.taskitem}>
