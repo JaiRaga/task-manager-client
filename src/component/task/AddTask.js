@@ -5,8 +5,8 @@ import AddIcon from "@material-ui/icons/Add";
 const useStyles = makeStyles((theme) => ({
   [theme.breakpoints.up("xs")]: {
     addtask: {
-      height: 100,
-      width: 125
+      height: 75,
+      width: 150
     }
   },
   [theme.breakpoints.up("sm")]: {
@@ -29,7 +29,10 @@ const AddTask = () => {
     <Grid container item>
       <Grid item>
         <Tooltip title='Add Task' arrow placement='bottom'>
-          <Button className={classes.addtask} variant='contained'>
+          <Button
+            className={classes.addtask}
+            color='primary'
+            variant='contained'>
             <AddIcon />
           </Button>
         </Tooltip>
