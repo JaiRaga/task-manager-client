@@ -7,18 +7,13 @@ import Tasks from "../task/Tasks";
 
 const useStyles = makeStyles((theme) => ({
   task: {
-    height: "100vh",
-    width: "50%",
-    backgroundColor: "#f7fbe1"
+    width: "50%"
   },
   workspace: {
-    height: "100vh",
-    width: "50%",
-    backgroundColor: "#4cbbb9"
+    width: "50%"
   },
   spacing: {
-    padding: 10,
-    height: "100vh"
+    padding: 10
   }
 }));
 
